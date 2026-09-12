@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServeSmart Favorites</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">ServeSmart</span>
+      <span class="brand-sub">Your saved recipes</span>
+    </div>
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Explore</a>
+      <a class="nav-link active" href="favorites.html">Favorites</a>
+      <a class="nav-link" id="loginLink" href="login.html">Login</a>
+      <button class="nav-button hidden" id="logoutBtn" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="results">
+      <div id="favStatus" class="status">Loading favorites...</div>
+      <div id="favorites" class="cards"></div>
+    </section>
+  </main>
+
+  <div id="recipeModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="close-btn" id="closeModal" type="button">Close</button>
+      <div class="modal-content">
+        <div class="modal-media">
+          <img id="modalImage" alt="Recipe image">
+          <div class="modal-tags">
+            <span id="modalCategory"></span>
+            <span id="modalArea"></span>
+          </div>
+        </div>
+        <div class="modal-body">
+          <h2 id="modalTitle"></h2>
+          <div id="modalInstructions" class="instructions"></div>
+          <div class="scale-row">
+            <label class="field">
+              <span>Persons</span>
+              <input id="modalServings" type="number" min="1" max="20" value="2">
+            </label>
+          </div>
+          <h3>Ingredients</h3>
+          <ul id="modalIngredients" class="ingredient-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="favorites.js"></script>
+</body>
+</html>

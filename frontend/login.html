@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServeSmart Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">ServeSmart</span>
+      <span class="brand-sub">Welcome back</span>
+    </div>
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Explore</a>
+      <a class="nav-link" href="favorites.html">Favorites</a>
+      <a class="nav-link active" href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="page auth-page">
+    <form class="auth-card" id="loginForm">
+      <h1>Sign in</h1>
+      <p>Access saved recipes and sync your favorites.</p>
+      <label class="field">
+        <span>Email</span>
+        <input type="email" id="email" placeholder="you@example.com" required>
+      </label>
+      <label class="field">
+        <span>Password</span>
+        <input type="password" id="password" placeholder="••••••••" required>
+      </label>
+      <button class="primary" type="submit">Login</button>
+      <p class="muted">No account yet? <a href="register.html">Create one</a></p>
+    </form>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>

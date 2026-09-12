@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServeSmart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">ServeSmart</span>
+      <span class="brand-sub">Cook smarter with every search</span>
+    </div>
+    <nav class="nav">
+      <a class="nav-link active" href="index.html">Explore</a>
+      <a class="nav-link" href="favorites.html">Favorites</a>
+      <a class="nav-link" id="loginLink" href="login.html">Login</a>
+      <button class="nav-button hidden" id="logoutBtn" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Discover recipes that scale with your table.</h1>
+        <p>
+          Search and explore delicious recipes with ingredients and cooking instructions.
+        </p>
+      </div>
+      <div class="search-panel">
+        <label class="field">
+          <span>Search recipes</span>
+          <input id="searchInput" type="text" placeholder="e.g. Pizza">
+        </label>
+        <label class="field">
+          <span>Persons</span>
+          <input id="servingsInput" type="number" min="1" max="20" value="2">
+        </label>
+        <button class="primary" id="searchBtn" type="button">Search recipes</button>
+      </div>
+    </section>
+
+    <section class="results">
+      <div id="status" class="status">Start with a search to see recipes.</div>
+      <div id="recipes" class="cards"></div>
+    </section>
+  </main>
+
+  <div id="recipeModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="close-btn" id="closeModal" type="button">Close</button>
+      <div class="modal-content">
+        <div class="modal-media">
+          <img id="modalImage" alt="Recipe image">
+          <div class="modal-tags">
+            <span id="modalCategory"></span>
+            <span id="modalArea"></span>
+          </div>
+        </div>
+        <div class="modal-body">
+          <h2 id="modalTitle"></h2>
+          <div id="modalInstructions" class="instructions"></div>
+          <div class="scale-row">
+            <label class="field">
+              <span>Persons</span>
+              <input id="modalServings" type="number" min="1" max="20" value="2">
+            </label>
+            <button class="secondary" id="saveFavoriteBtn" type="button">Save to favorites</button>
+          </div>
+          <h3>Ingredients</h3>
+          <ul id="modalIngredients" class="ingredient-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "/api";
 
 const favoritesEl = document.getElementById("favorites");
 const statusEl = document.getElementById("favStatus");
